@@ -1,0 +1,558 @@
+[
+  {
+    "field": [
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 167,
+        "name": "Autumn Horizon",
+        "odds": 3,
+        "position": 569.0,
+        "time": 11.207999999999652
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 108,
+        "name": "Prairie Whisper",
+        "odds": 17,
+        "position": 460.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 170,
+        "name": "Bluegum Stride",
+        "odds": 12,
+        "position": 571.0,
+        "time": 11.023999999999672
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 25,
+        "name": "Daring Compass",
+        "odds": 19,
+        "position": 481.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 168,
+        "name": "Bluegum Comet",
+        "odds": 7,
+        "position": 569.0,
+        "time": 10.879999999999688
+      },
+      {
+        "fallen": true,
+        "finished": false,
+        "id": 86,
+        "name": "Misty Stride",
+        "odds": 5,
+        "position": 207.0,
+        "time": 0.0
+      }
+    ],
+    "finish_order": [
+      4,
+      2,
+      0
+    ],
+    "initial": [
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 167,
+        "name": "Autumn Horizon",
+        "odds": 3,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 108,
+        "name": "Prairie Whisper",
+        "odds": 17,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 170,
+        "name": "Bluegum Stride",
+        "odds": 12,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 25,
+        "name": "Daring Compass",
+        "odds": 19,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 168,
+        "name": "Bluegum Comet",
+        "odds": 7,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 86,
+        "name": "Misty Stride",
+        "odds": 5,
+        "position": 1.0,
+        "time": 0.0
+      }
+    ],
+    "players": [
+      {
+        "cash": 4800,
+        "horse": 0,
+        "kind": 0,
+        "name": "ALICE",
+        "racing": true,
+        "stake": 200
+      },
+      {
+        "cash": 4800,
+        "horse": 0,
+        "kind": 0,
+        "name": "BOB",
+        "racing": true,
+        "stake": 200
+      }
+    ],
+    "rng_state": "-4473324454359502181",
+    "seed": 42
+  },
+  {
+    "field": [
+      {
+        "fallen": true,
+        "finished": false,
+        "id": 213,
+        "name": "Hinterland Whisper",
+        "odds": 8,
+        "position": 50.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 98,
+        "name": "Orchard Comet",
+        "odds": 2,
+        "position": 571.0,
+        "time": 10.791999999999698
+      },
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 119,
+        "name": "River Comet",
+        "odds": 6,
+        "position": 569.0,
+        "time": 10.215999999999761
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 34,
+        "name": "Evening Horizon",
+        "odds": 7,
+        "position": 520.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 96,
+        "name": "Northern Rambler",
+        "odds": 9,
+        "position": 499.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 182,
+        "name": "Dapple Comet",
+        "odds": 14,
+        "position": 572.0,
+        "time": 10.615999999999717
+      }
+    ],
+    "finish_order": [
+      2,
+      5,
+      1
+    ],
+    "initial": [
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 213,
+        "name": "Hinterland Whisper",
+        "odds": 8,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 98,
+        "name": "Orchard Comet",
+        "odds": 2,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 119,
+        "name": "River Comet",
+        "odds": 6,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 34,
+        "name": "Evening Horizon",
+        "odds": 7,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 96,
+        "name": "Northern Rambler",
+        "odds": 9,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 182,
+        "name": "Dapple Comet",
+        "odds": 14,
+        "position": 1.0,
+        "time": 0.0
+      }
+    ],
+    "players": [
+      {
+        "cash": 4800,
+        "horse": 0,
+        "kind": 0,
+        "name": "ALICE",
+        "racing": true,
+        "stake": 200
+      },
+      {
+        "cash": 4800,
+        "horse": 0,
+        "kind": 0,
+        "name": "BOB",
+        "racing": true,
+        "stake": 200
+      }
+    ],
+    "rng_state": "83123638801622320",
+    "seed": 723
+  },
+  {
+    "field": [
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 177,
+        "name": "Cedar Stride",
+        "odds": 7,
+        "position": 569.0,
+        "time": 11.383999999999633
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 209,
+        "name": "Gumtree Horizon",
+        "odds": 16,
+        "position": 508.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 92,
+        "name": "Northern Lantern",
+        "odds": 11,
+        "position": 541.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 24,
+        "name": "Daring Whisper",
+        "odds": 10,
+        "position": 569.0,
+        "time": 11.76799999999959
+      },
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 58,
+        "name": "Indigo Stride",
+        "odds": 10,
+        "position": 570.0,
+        "time": 10.839999999999693
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 145,
+        "name": "Velvet Rambler",
+        "odds": 20,
+        "position": 532.0,
+        "time": 0.0
+      }
+    ],
+    "finish_order": [
+      4,
+      0,
+      3
+    ],
+    "initial": [
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 177,
+        "name": "Cedar Stride",
+        "odds": 7,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 209,
+        "name": "Gumtree Horizon",
+        "odds": 16,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 92,
+        "name": "Northern Lantern",
+        "odds": 11,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 24,
+        "name": "Daring Whisper",
+        "odds": 10,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 58,
+        "name": "Indigo Stride",
+        "odds": 10,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 145,
+        "name": "Velvet Rambler",
+        "odds": 20,
+        "position": 1.0,
+        "time": 0.0
+      }
+    ],
+    "players": [
+      {
+        "cash": 4800,
+        "horse": 0,
+        "kind": 0,
+        "name": "ALICE",
+        "racing": true,
+        "stake": 200
+      },
+      {
+        "cash": 4800,
+        "horse": 0,
+        "kind": 0,
+        "name": "BOB",
+        "racing": true,
+        "stake": 200
+      }
+    ],
+    "rng_state": "-8932483026892659955",
+    "seed": 35703
+  },
+  {
+    "field": [
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 80,
+        "name": "Lantern Whisper",
+        "odds": 12,
+        "position": 571.0,
+        "time": 10.111999999999773
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 193,
+        "name": "Ember Compass",
+        "odds": 15,
+        "position": 564.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 59,
+        "name": "Indigo Whisper",
+        "odds": 4,
+        "position": 571.0,
+        "time": 11.59199999999961
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 95,
+        "name": "Northern Compass",
+        "odds": 12,
+        "position": 547.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 198,
+        "name": "Fable Stride",
+        "odds": 15,
+        "position": 543.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": true,
+        "id": 115,
+        "name": "Quiet Whisper",
+        "odds": 8,
+        "position": 570.0,
+        "time": 9.751999999999812
+      }
+    ],
+    "finish_order": [
+      5,
+      0,
+      2
+    ],
+    "initial": [
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 80,
+        "name": "Lantern Whisper",
+        "odds": 12,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 193,
+        "name": "Ember Compass",
+        "odds": 15,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 59,
+        "name": "Indigo Whisper",
+        "odds": 4,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 95,
+        "name": "Northern Compass",
+        "odds": 12,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 198,
+        "name": "Fable Stride",
+        "odds": 15,
+        "position": 1.0,
+        "time": 0.0
+      },
+      {
+        "fallen": false,
+        "finished": false,
+        "id": 115,
+        "name": "Quiet Whisper",
+        "odds": 8,
+        "position": 1.0,
+        "time": 0.0
+      }
+    ],
+    "players": [
+      {
+        "cash": 4800,
+        "horse": 0,
+        "kind": 0,
+        "name": "ALICE",
+        "racing": true,
+        "stake": 200
+      },
+      {
+        "cash": 4800,
+        "horse": 0,
+        "kind": 0,
+        "name": "BOB",
+        "racing": true,
+        "stake": 200
+      }
+    ],
+    "rng_state": "7961755801412598804",
+    "seed": 1245
+  }
+]

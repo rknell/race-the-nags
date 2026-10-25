@@ -1,0 +1,15 @@
+.tools/
+dist/
+godot/.godot/
+*.log
+release/
+__pycache__/
+.env
+.env.*
+*.pem
+*.key
+
+.playwright-mcp/
+# Original DOS distribution and reverse-engineering evidence stay local.
+application/
+evidence/
