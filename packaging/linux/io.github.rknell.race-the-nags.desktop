@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Race the Nags
+GenericName=Horse Racing Game
+Comment=Race horses and place play-money bets with friends
+Exec=race-the-nags
+Icon=io.github.rknell.race-the-nags
+Terminal=false
+Categories=Game;SportsGame;
+Keywords=horse;racing;retro;multiplayer;play money;
+StartupNotify=false

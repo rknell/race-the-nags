@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AI-assisted upstream metadata. This is not a Flatpak manifest or a Flathub submission. -->
+<component type="desktop-application">
+  <id>io.github.rknell.race-the-nags</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT AND LicenseRef-proprietary</project_license>
+  <name>Race the Nags</name>
+  <summary>Race horses and place play-money bets with friends</summary>
+  <description>
+    <p>Pick a horse, place a play-money bet and watch the race with up to six players sharing a screen. Each player starts with a fictional bankroll, and all bets and payouts stay inside the game.</p>
+    <p>Choose Original racing rules or Remastered mode with persistent speed, stamina, consistency and recent form. Switch between Classic, Enhanced and Animated graphics without changing the race.</p>
+    <ul>
+      <li>Win, Place and Show bets, plus multi-horse bets in Remastered mode</li>
+      <li>Manual play or automatic racing strategies</li>
+      <li>Saved games, remembered player names and racing records</li>
+    </ul>
+    <p>This independent tribute includes original and creator-supplied enhanced images under separate rights notices. These images are excluded from the MIT licence. Additional redistribution permission for the original graphics has not been documented; consult the distribution notices.</p>
+  </description>
+  <launchable type="desktop-id">io.github.rknell.race-the-nags.desktop</launchable>
+  <developer id="io.github.rknell">
+    <name>Race the Nags reconstruction contributors</name>
+  </developer>
+  <url type="homepage">https://rknell.github.io/race-the-nags/</url>
+  <url type="bugtracker">https://github.com/rknell/race-the-nags/issues</url>
+  <url type="vcs-browser">https://github.com/rknell/race-the-nags</url>
+  <url type="help">https://github.com/rknell/race-the-nags/blob/main/README.md</url>
+  <categories><category>Game</category><category>SportsGame</category></categories>
+  <keywords><keyword>horses</keyword><keyword>racing</keyword><keyword>retro</keyword></keywords>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Enhanced graphics and player setup</caption>
+      <image type="source" width="1280" height="800">https://raw.githubusercontent.com/rknell/race-the-nags/v0.1.2/docs/remastered-title-screen.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>A race with the creator-supplied enhanced graphics</caption>
+      <image type="source" width="1280" height="800">https://raw.githubusercontent.com/rknell/race-the-nags/v0.1.2/docs/remastered-race-screen.png</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1">
+    <content_attribute id="money-gambling">moderate</content_attribute>
+    <content_attribute id="violence-cartoon">moderate</content_attribute>
+  </content_rating>
+  <supports><control>pointing</control><control>keyboard</control></supports>
+  <releases>
+    <release version="0.1.2" date="2026-10-25">
+      <description><p>Restore the creator-supplied enhanced portrait and horse sprite sheets.</p></description>
+      <url>https://github.com/rknell/race-the-nags/releases/tag/v0.1.2</url>
+    </release>
+  </releases>
+</component>
