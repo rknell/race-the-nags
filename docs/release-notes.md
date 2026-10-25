@@ -1,4 +1,6 @@
-Restores the project creator’s enhanced graphics that were mistakenly replaced in the public build. **Enhanced graphics** once again uses the supplied title portrait, gallop sheet and fallen-rider sheet, unchanged. **Animated horses** also uses the supplied enhanced portrait. Classic graphics and all racing rules remain available.
+Fixes automatic racing stopping at the results screen after switching windows. Alt+Tab, Ctrl+Tab, and modifier keys now preserve auto mode; ordinary game keys and the Cancel auto button still stop future bets.
+
+Adds regression checks for window/tab switching and documents browser background behaviour. Hidden browser tabs or minimized browser windows can still pause processing; keep the browser game visible in its own window or use the desktop app for background automatic runs.
 
 ## Play
 
