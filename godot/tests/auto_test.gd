@@ -164,6 +164,21 @@ func test_ui() -> void:
 	check(game.model.phase == "RESULTS" and game.model.race_number == settled_race and game.model.players[0].cash == settled_cash, "Pending results timers cannot place another bet after cancellation")
 	game.finish_results()
 	game.toggle_auto()
+	for modifier in [KEY_SHIFT, KEY_CTRL, KEY_ALT, KEY_META]:
+		var switch_key := InputEventKey.new()
+		switch_key.keycode = modifier
+		switch_key.pressed = true
+		game._unhandled_key_input(switch_key)
+		check(game.model.auto_remaining > 0, "Modifier does not cancel auto: %d" % modifier)
+	for shortcut in [KEY_ALT, KEY_CTRL, KEY_META]:
+		var switch_key := InputEventKey.new()
+		switch_key.keycode = KEY_TAB
+		switch_key.pressed = true
+		switch_key.alt_pressed = shortcut == KEY_ALT
+		switch_key.ctrl_pressed = shortcut == KEY_CTRL
+		switch_key.meta_pressed = shortcut == KEY_META
+		game._unhandled_key_input(switch_key)
+		check(game.model.auto_remaining > 0, "Window/tab switch does not cancel auto: %d" % shortcut)
 	var key := InputEventKey.new()
 	key.keycode = KEY_A
 	key.pressed = true

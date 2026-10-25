@@ -1025,6 +1025,10 @@ func _notification(what: int) -> void:
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo:
 		return
+	# Switching windows/tabs must not count as a request to cancel auto.
+	# The modifier arrives before the OS/browser consumes the shortcut.
+	if event.keycode in [KEY_SHIFT, KEY_CTRL, KEY_ALT, KEY_META] or event.keycode == KEY_TAB and (event.alt_pressed or event.ctrl_pressed or event.meta_pressed):
+		return
 	if game_over_active:
 		if event.keycode == KEY_ESCAPE:
 			show_title()

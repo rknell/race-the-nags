@@ -46,6 +46,10 @@ and have not been played on those operating systems.
 Browser progress belongs to that browser and website. Clearing site data can
 remove saves; browser and desktop saves do not synchronize. Best on a desktop
 or laptop. Browser keyboard shortcuts may take precedence over game shortcuts.
+Browsers can pause hidden tabs or minimized windows, including automatic racing.
+Keep the game visible in its own browser window, or use the desktop app for
+automatic runs while working in other windows. Window/tab switching shortcuts
+and modifier keys do not cancel auto; an ordinary game key still does.
 
 | Control | Action |
 | --- | --- |
