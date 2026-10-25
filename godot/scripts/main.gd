@@ -231,7 +231,7 @@ func show_title() -> void:
 	resume.disabled = not FileAccess.file_exists(save_path)
 	button_at(p, "HOW TO PLAY", Rect2(30, 570, 225, 38), show_help)
 	button_at(p, "HALL OF FAME", Rect2(269, 570, 225, 38), show_fame)
-	label_at(body, "Original game by Dick Olsen  •  Native reconstruction  •  Play money only", Vector2(66, 751), 14, MUTED)
+	label_at(body, "Game & classic art: Dick Olsen / Olsen Outdoors, 1992  •  Free tribute  •  Play money", Vector2(66, 751), 14, MUTED)
 	names[0].grab_focus()
 
 func set_game_mode(index: int) -> void:
@@ -286,7 +286,7 @@ func add_graphics_choice(pos: Vector2, dimensions: Vector2) -> void:
 	graphics_choice = OptionButton.new()
 	graphics_choice.position = pos
 	graphics_choice.size = dimensions
-	graphics_choice.add_item("Pixel graphics")
+	graphics_choice.add_item("Classic — 1992 graphics")
 	graphics_choice.add_item("Illustrated graphics")
 	graphics_choice.add_item("Animated horses")
 	graphics_choice.select(graphics_mode)
@@ -841,7 +841,11 @@ func show_help() -> void:
 		"F8 saves mid-race. Continue Saved Game restores your whole visit.",
 		"Go home records your bankroll. Each mode has its own racing records.",
 		"",
-		"Original game: Dick Olsen / Olsen Outdoors, 1992. Remastered adds new rules."
+		"Original game & Classic art: Dick Olsen / Olsen Outdoors, 1992.",
+		"A free preservation tribute, without affiliation or endorsement.",
+		"Original graphics are not MIT-licensed. See THIRD_PARTY_NOTICES.md.",
+		"Rightsholders/heirs: github.com/rknell/race-the-nags/issues",
+		"We will promptly remove affected material on a rightful takedown request."
 	])
 	var scroll := ScrollContainer.new()
 	scroll.name = "HelpScroll"

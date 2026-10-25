@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Check source excludes original material
+      - name: Check source and heritage artwork boundaries
         run: python3 tools/check-publication.py
       - name: Read Godot version
         id: godot
@@ -38,7 +38,7 @@ jobs:
           RELEASE_REF: ${{ github.ref_name }}
           RELEASE_TYPE: ${{ github.ref_type }}
         run: |
-          version=0.1.0
+          version=0.1.1
           if [ "$RELEASE_TYPE" = tag ]; then version="$RELEASE_REF"; fi
           python3 tools/release.py --version "$version"
       - name: Smoke test the Linux release

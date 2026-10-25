@@ -1,14 +1,15 @@
 # Race the Nags — independent Godot recreation
 
 A horse racing game inspired by Dick Olsen's 1992 **Race the Nags**. The public
-version contains a new GDScript implementation, independently drawn artwork
-and 217 newly composed horse names. It does not include the original DOS game,
-recovered sprites, enhanced adaptations of those sprites, or decompiled code.
+version contains a new GDScript implementation and 217 newly composed horse
+names. Classic graphics preserve the original portrait and horse sprites;
+Illustrated and Animated use new artwork. The original DOS programs, raw asset
+files and decompiled code are not included.
 
 **[Play in your browser](https://rknell.github.io/race-the-nags/)** ·
 **[Download for Linux, Windows, macOS or Web](https://github.com/rknell/race-the-nags/releases/latest)**
 
-![The game's title screen with independently drawn artwork](docs/title-screen.png)
+![The game's title screen with credited original graphics](docs/title-screen.png)
 
 ## Play
 
@@ -17,12 +18,11 @@ $50 of play money. Select a stake, runner and bet type, then start the race.
 Minimum stake is $2; the maximum is $1,000 or the available bankroll.
 
 - **Original rules:** the recovered motion, odds and Win/Place/Show rules,
-  implemented anew in Godot. Original refers to the rules, not bundled DOS code
-  or original artwork. Win finishes first, Place top two and Show top three.
+  implemented anew in Godot. Original refers to the rules; no DOS code is bundled. Win finishes first, Place top two and Show top three.
 - **Remastered:** persistent speed, stamina and consistency, recent form, and
   additional Quinella, Exacta, Trifecta and Box Trifecta bets. See
   [Remastered rules](docs/form-mode.md).
-- **Graphics:** new Pixel sprites, new Illustrated sprites, or code-drawn
+- **Graphics:** credited Classic (1992) sprites, new Illustrated sprites, or code-drawn
   Animated horses. Graphics can change without affecting a race or its RNG.
 - **Automatic racing:** choose a horse-selection strategy, bet type, race count
   and stake. A $0 stake uses 10% of the bankroll, with a $2 minimum.
@@ -80,14 +80,19 @@ publish GitHub Releases after the checks pass. See
 
 ## Artwork and provenance
 
-All public horse sprites and portraits are new SVG drawings defined in
-`tools/generate_artwork.py`. Run that script to regenerate them without reading
-any original game files. See [public artwork](docs/asset-recovery.md).
+Classic graphics use 31 original images credited to Richard “Dick” Olsen /
+Olsen Outdoors, 1992. Selected files and their hashes are documented in
+`godot/assets/heritage/provenance.json`. Original rights are retained; no
+additional permission for this reconstruction has been documented.
 
-The new rules implementation was informed by analysis of the original game.
-Original DOS materials and private reverse-engineering evidence are excluded
-from the public source and release packages. Original authorship is credited
-as historical inspiration; this recreation is not endorsed by the author.
+Illustrated/Animated artwork is new. The new SVG assets are defined in
+`tools/generate_artwork.py`. See [artwork and provenance](docs/asset-recovery.md).
 
-The new code, artwork, data and documentation are **MIT-licensed**. Godot's
-licence is included separately. See [third-party notices](THIRD_PARTY_NOTICES.md).
+This is a free, non-commercial preservation tribute without endorsement. If a
+rightsholder, rightful heir or estate representative contacts the maintainer,
+we will promptly remove the affected material or take the project down as
+requested. [Contact and full notice](THIRD_PARTY_NOTICES.md).
+
+The new implementation, new artwork, roster and documentation use **MIT**.
+The original images and their reproduction in screenshots do not. Free hosting
+and a takedown commitment do not establish permission to reuse those assets.

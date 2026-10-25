@@ -8,7 +8,7 @@ func capture() -> void:
 	main.save_path = "user://public-capture-save.json"
 	root.add_child(main)
 	main.names[0].text = "PLAYER ONE"
-	main.set_graphics_mode(1)
+	main.set_graphics_mode(0)
 	main.sound_on = false
 	await process_frame
 	await process_frame

@@ -1,0 +1,132 @@
+{
+  "credit": "Richard “Dick” Olsen / Olsen Outdoors, 1992",
+  "notice": "THIRD_PARTY_NOTICES.md",
+  "source_reference": "https://archive.org/details/RaceTheNags",
+  "permission_status": "No additional permission for reuse in this reconstruction has been documented. Not MIT-licensed.",
+  "files": {
+    "horse_00.png": {
+      "sha256": "1028b9465ea259a9fd2d8de13419b6689d1316528c365ed26ef7bdf95fdf7d6e",
+      "source": "PONY.IMG"
+    },
+    "horse_01.png": {
+      "sha256": "4471f7a84c75a58abb9cadf7559584186a199f2aee4e8cae79e2a5dd266f2f62",
+      "source": "PONY.IMG"
+    },
+    "horse_02.png": {
+      "sha256": "e3927ef53f628e8d72ca50f8ce4deda2694c360f89d4932717c199f8895aa2b0",
+      "source": "PONY.IMG"
+    },
+    "horse_03.png": {
+      "sha256": "5b11ec9657d3e271222779fcc0450de2f660bb01df6bbbe98877c3ce74204933",
+      "source": "PONY.IMG"
+    },
+    "horse_04.png": {
+      "sha256": "aca8f61928943389ee9835e305ba22dd9ba9f01ef599af99fa24ce85518e2cb8",
+      "source": "PONY.IMG"
+    },
+    "horse_05.png": {
+      "sha256": "04d35c6d097132cc7de61789786bc7e3d796aca2288aece5fad47613a573cd68",
+      "source": "PONY.IMG"
+    },
+    "horse_06.png": {
+      "sha256": "e2a1ced622b455214d51a8599773318e6aaa136f4cc856a0a60b0a8c8c3be375",
+      "source": "PONY.IMG"
+    },
+    "horse_07.png": {
+      "sha256": "e72500a9f7d9ff4ee6229ffdb8e61de2693d986043584f7df96571c5bff4a26b",
+      "source": "PONY.IMG"
+    },
+    "horse_08.png": {
+      "sha256": "889ff042d6847c84ef6357c44347471f7002c2188db6da5fe524246cff313500",
+      "source": "PONY.IMG"
+    },
+    "horse_09.png": {
+      "sha256": "a543dee6fd024802b7b43154b4a2a27ccdfdc21a7b00f1a0750245f4294c7f5d",
+      "source": "PONY.IMG"
+    },
+    "horse_10.png": {
+      "sha256": "b59daa1614a22e5b7445f2a6985fd4c1ab2daea2fb424b4efb77b6bf5b1c29e5",
+      "source": "PONY.IMG"
+    },
+    "horse_11.png": {
+      "sha256": "381b19b037ff0f44a622d5171d4b24c52b737fd2cc16ef6895f639bfc33ea285",
+      "source": "PONY.IMG"
+    },
+    "horse_12.png": {
+      "sha256": "5876924c2ded09b177c35df03e96077e4b3db085a891081930d8c2086914ccb6",
+      "source": "PONY.IMG"
+    },
+    "horse_13.png": {
+      "sha256": "e17e4ee709045c0a093e705a91c97ab2b35e60a9cfce687ced6d833b6a00c86c",
+      "source": "PONY.IMG"
+    },
+    "horse_14.png": {
+      "sha256": "03260e3e086f5008f8597dcb1d6792fffc561cf99f019628d82f96d53857aa27",
+      "source": "PONY.IMG"
+    },
+    "horse_15.png": {
+      "sha256": "c5ed95d4c7c103ebe13cede26f5d9527992a514d456700b36dfa77d4fc6fdc52",
+      "source": "PONY.IMG"
+    },
+    "horse_16.png": {
+      "sha256": "b667cdd5d66fdeeb40e66a4c8917baa3abf07cb40ed282a59d601b1a1dd3ea99",
+      "source": "PONY.IMG"
+    },
+    "horse_17.png": {
+      "sha256": "86c6c4005e75a47f95f29b969b93634edb3636fc11f28666e31fd5fa209a7bb8",
+      "source": "PONY.IMG"
+    },
+    "horse_18.png": {
+      "sha256": "e755d04dca64396fd4b86566ad20b7373bf14334b5ae6d9fb737b8f0d0bdbe9f",
+      "source": "PONY.IMG"
+    },
+    "horse_19.png": {
+      "sha256": "53d335fad997d27550d70ed7234da279107f8aa01f3eb1cfe7023e77271bd6a7",
+      "source": "PONY.IMG"
+    },
+    "horse_20.png": {
+      "sha256": "09959f74f99c586c472e612f958051b8d51fe378b5de118201eefa4fcde1ead7",
+      "source": "PONY.IMG"
+    },
+    "horse_21.png": {
+      "sha256": "1f4e9550220d37fcfd5d719eb5e844f3e948d7bd0d26271e594179ba78d09e9b",
+      "source": "PONY.IMG"
+    },
+    "horse_22.png": {
+      "sha256": "731f58c7436e5dcfa0c26a462ae69c151441c17e68db76e37c9d8917a0c3dac7",
+      "source": "PONY.IMG"
+    },
+    "horse_23.png": {
+      "sha256": "456e8f114848856b96ae89fbab37152827f6c4aea6b7547ccbe3796be29270ea",
+      "source": "PONY.IMG"
+    },
+    "horse_24.png": {
+      "sha256": "6fe229b51124e894211ca1488f1589b435f3eb73eb4374fa1f0689ea2c313241",
+      "source": "PONY.IMG"
+    },
+    "horse_25.png": {
+      "sha256": "421b6ab8bb28424b1a84715c3c108d6f089b58074ea4c3a0f89fcf5974a94071",
+      "source": "PONY.IMG"
+    },
+    "horse_26.png": {
+      "sha256": "8990736e15b2dadd642019c1ffcfeb0b43769b14e2db868430978856d8539a19",
+      "source": "PONY.IMG"
+    },
+    "horse_27.png": {
+      "sha256": "dc2f4977f4420b8d3e42e1bf4b50f7cd47bc37a3851320d5372230e1f258ba25",
+      "source": "PONY.IMG"
+    },
+    "horse_28.png": {
+      "sha256": "bfd8686110afa56b8f30af57d8888447fa918adc052a338a4d9ad2304cafe2e2",
+      "source": "PONY.IMG"
+    },
+    "horse_29.png": {
+      "sha256": "8891f4bfae33ee7a28169de2bf0d3aee2b1140248e05f3993900f288d8ea7d5f",
+      "source": "PONY.IMG"
+    },
+    "portrait.png": {
+      "sha256": "0eb86bb2bea90036ae3420891069085255369dfa3734185eb6262ba1ee8d2d7c",
+      "source": "NAG.PCX"
+    }
+  }
+}

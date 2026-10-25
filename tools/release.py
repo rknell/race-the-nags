@@ -24,7 +24,7 @@ def zip_tree(source, target):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--version', default='0.1.0')
+    parser.add_argument('--version', default='0.1.1')
     args = parser.parse_args()
     version = args.version.removeprefix('v')
     if not version or any(c not in '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.-' for c in version):
@@ -66,6 +66,7 @@ def main():
         else:
             zip_tree(folder, archive_path)
     shutil.copy2(ROOT / 'web/index.html', out / 'site/index.html')
+    shutil.copy2(ROOT / 'web/credits.html', out / 'site/credits.html')
     shutil.copy2(ROOT / 'docs/title-screen.png', out / 'site/screenshot.png')
     for notice in ('THIRD_PARTY_NOTICES.md', 'LICENSE', 'GODOT-LICENSE.txt'):
         if (ROOT / notice).exists():

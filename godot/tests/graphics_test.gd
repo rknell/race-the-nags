@@ -22,6 +22,7 @@ func run() -> void:
 	await process_frame
 	main.sound_on = false
 	check(main.graphics_choice.selected == Artwork.CLASSIC, "Classic is the initial graphics choice")
+	check(main.title_portrait.texture.resource_path == "res://assets/heritage/portrait.png", "Classic credits and uses the restored portrait")
 	check(main.graphics_choice.item_count == 3, "Classic, Remastered and Animated are offered")
 	main.names[0].text = "GRAPHICS TEST"
 	main.graphics_choice.item_selected.emit(Artwork.REMASTERED)
@@ -38,7 +39,7 @@ func run() -> void:
 	var before: String = JSON.stringify(main.model.snapshot(), "", true, true)
 	main.graphics_choice.item_selected.emit(Artwork.CLASSIC)
 	check(JSON.stringify(main.model.snapshot(), "", true, true) == before, "Live graphics switch preserves race, bets, bankroll and RNG")
-	check(main.track.frames[24].resource_path.ends_with("horse_24.svg"), "Pixel style restores its fallen pose")
+	check(main.track.frames[24].resource_path.ends_with("horse_24.png"), "Classic restores the original fallen pose")
 	check(main.track.texture_filter == CanvasItem.TEXTURE_FILTER_NEAREST, "Classic uses crisp pixel filtering")
 	main.graphics_choice.item_selected.emit(Artwork.REMASTERED)
 	check(main.track.texture_filter == CanvasItem.TEXTURE_FILTER_LINEAR, "Remastered uses smooth filtering")

@@ -73,8 +73,10 @@ would need their saves migrated to its application-specific storage path.
 
 ## Licensing and publication checks
 
-The public implementation, artwork and stable roster use MIT. Original DOS
-materials, recovered or adapted artwork and private decompiled evidence are
-excluded from both the public source and releases. See `THIRD_PARTY_NOTICES.md`.
+The new implementation, new artwork and stable roster use MIT. The 31 selected
+Classic images retain their original rights and are excluded from MIT. Their
+hashes are allowlisted; other original material, DOS binaries and decompiled
+evidence remain excluded. See `THIRD_PARTY_NOTICES.md` for the free tribute and
+rightsholder/heir takedown commitment.
 `tools/check-publication.py` checks the tracked source and generated packs before
 publishing. Private local copies remain ignored and must never be force-added.
