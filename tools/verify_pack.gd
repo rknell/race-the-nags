@@ -11,6 +11,10 @@ func _initialize() -> void:
 	call_deferred("run")
 
 func run() -> void:
+	var icon_path: String = ProjectSettings.get_setting("application/config/icon", "")
+	check(icon_path == "res://assets/public/branding/app-icon.png", "Release uses the horse app icon")
+	var icon: Texture2D = load(icon_path) if not icon_path.is_empty() else null
+	check(icon != null and not icon.get_image().is_empty(), "App icon pixels decode from exported pack")
 	var args := OS.get_cmdline_user_args()
 	# The delayed check verifies an already-open release after a rebuild.
 	if args.size() >= 2 and args[0] == "--wait-for":

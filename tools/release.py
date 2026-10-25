@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import os
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import zipfile
@@ -24,7 +25,7 @@ def zip_tree(source, target):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--version', default='0.1.2')
+    parser.add_argument('--version', default='0.1.4')
     args = parser.parse_args()
     version = args.version.removeprefix('v')
     if not version or any(c not in '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.-' for c in version):
@@ -39,16 +40,24 @@ def main():
     run(runtime, '--headless', '--path', ROOT / 'godot', '--editor', '--import', '--quit')
     exports = [('Linux', 'linux/RaceTheNags.x86_64'), ('Windows', 'windows/RaceTheNags.exe'),
                ('macOS', 'macos/RaceTheNags.zip'), ('Web', 'site/play/index.html')]
-    # Set macOS bundle version for this export without changing checked-in presets.
+    # Apply the release version to project/native metadata without changing sources.
     presets_path = ROOT / 'godot/export_presets.cfg'
     presets = presets_path.read_text()
+    project_path = ROOT / 'godot/project.godot'
+    project = project_path.read_text()
     try:
-        presets_path.write_text(presets.replace('application/short_version="0.1.0"', f'application/short_version="{version}"')
-                               .replace('application/version="0.1.0"', f'application/version="{version}"'))
+        presets_path.write_text(re.sub(r'application/(short_version|version)="[^"]*"',
+                                      lambda m: f'application/{m[1]}="{version}"', presets))
+        project_path.write_text(re.sub(r'config/version="[^"]*"', f'config/version="{version}"', project))
         for preset, filename in exports:
             run(runtime, '--headless', '--path', ROOT / 'godot', '--export-release', preset, out / filename)
     finally:
         presets_path.write_text(presets)
+        project_path.write_text(project)
+    linux_metadata = ROOT / 'packaging/linux'
+    shutil.copy2(linux_metadata / 'io.github.rknell.race-the-nags.png', out / 'linux/icon.png')
+    shutil.copy2(linux_metadata / 'io.github.rknell.race-the-nags.desktop', out / 'linux/io.github.rknell.race-the-nags.desktop')
+    shutil.copy2(linux_metadata / 'install-desktop.sh', out / 'linux/install-desktop.sh')
     artifacts = out / 'artifacts'
     for platform in ('linux', 'windows', 'macos'):
         folder = out / platform
@@ -67,6 +76,8 @@ def main():
             zip_tree(folder, archive_path)
     shutil.copy2(ROOT / 'web/index.html', out / 'site/index.html')
     shutil.copy2(ROOT / 'web/credits.html', out / 'site/credits.html')
+    for name in ('favicon.ico', 'icon-32.png', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'):
+        shutil.copy2(ROOT / 'web' / name, out / 'site' / name)
     shutil.copy2(ROOT / 'docs/title-screen.png', out / 'site/screenshot.png')
     for notice in ('THIRD_PARTY_NOTICES.md', 'LICENSE', 'GODOT-LICENSE.txt'):
         if (ROOT / notice).exists():

@@ -21,6 +21,13 @@ python3 tools/release.py --version 0.1.0
 The release script replaces only the generated `release/` directory. The
 existing development build under `dist/` is independent.
 
+The master app icon is `godot/assets/public/branding/app-icon.png`. Godot uses it
+for the running game, Windows executable, macOS bundle and browser game. To
+regenerate the committed website and Linux icon sizes, run
+`python3 tools/generate_icons.py` with Pillow installed. The release script
+includes those icons and the optional Linux application-menu installer in the
+download archives.
+
 Four ZIPs and `SHA256SUMS.txt` are generated under `release/artifacts/`:
 
 - Linux x86_64: release runtime and PCK (extract together).

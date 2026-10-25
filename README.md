@@ -1,5 +1,7 @@
 # Race the Nags — independent Godot recreation
 
+<img src="godot/assets/public/branding/app-icon.png" alt="Race the Nags horse app icon" width="128" height="128">
+
 A horse racing game inspired by Dick Olsen's 1992 **Race the Nags**. The public
 version contains a new GDScript implementation and 217 newly composed horse
 names. Classic graphics preserve the original portrait and horse sprites;
@@ -38,6 +40,9 @@ Desktop archives need no Godot installation. Extract the whole ZIP and run:
 | Linux x86_64 | `RaceTheNags.x86_64` (keep the PCK beside it) |
 | Windows x86_64 | `RaceTheNags.exe` |
 | macOS Intel / Apple Silicon | `Race the Nags.app` |
+
+Linux users can run `./install-desktop.sh` from the extracted release to add the
+game and its icon to their application menu. Keep that folder in place afterward.
 
 macOS is ad-hoc signed, not Developer ID signed or notarized. Windows is
 unsigned. Linux is smoke-tested; Windows and macOS builds are cross-exported

@@ -5,8 +5,9 @@ Prepared on 25 October 2026. **Not submitted to Flathub.**
 ## Prepared upstream files
 
 - `io.github.rknell.race-the-nags.desktop`: application-menu entry; expects an installed `race-the-nags` command.
-- `io.github.rknell.race-the-nags.metainfo.xml`: AppStream listing metadata for the existing v0.1.2 game, with screenshots, developer and release information, and play-money gambling/cartoon-violence ratings.
-- `io.github.rknell.race-the-nags.svg`: a scalable icon based on the independently drawn horse-badge study. It does not replace the game's enhanced graphics.
+- `io.github.rknell.race-the-nags.metainfo.xml`: AppStream listing metadata through v0.1.4, with screenshots, developer and release information, and play-money gambling/cartoon-violence ratings.
+- `io.github.rknell.race-the-nags.png`: the 512-pixel app icon, exported from the new AI-generated chestnut horse artwork. It replaces the old desktop badge and does not replace the game's enhanced graphics.
+- `install-desktop.sh`: included in Linux release ZIPs, alongside the icon and desktop entry. Run it from the extracted release to install a per-user application-menu entry. Keep the extracted game in place afterward; rerun the script after moving it. Remove `~/.local/share/applications/io.github.rknell.race-the-nags.desktop` and `~/.local/share/icons/hicolor/512x512/apps/io.github.rknell.race-the-nags.png` to remove the menu integration (or the corresponding paths under `XDG_DATA_HOME`).
 - `../../tools/validate-linux-metadata.sh`: desktop/AppStream validation.
 
 The application ID corresponds to the existing GitHub repository. These files

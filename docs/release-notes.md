@@ -1,6 +1,8 @@
-Fixes automatic racing stopping at the results screen after switching windows. Alt+Tab, Ctrl+Tab, and modifier keys now preserve auto mode; ordinary game keys and the Cancel auto button still stop future bets.
+Adds the new chestnut horse app icon throughout the project: running game windows, Windows executable resources, macOS app bundles, Linux desktop integration, website branding and browser/bookmark icons.
 
-Adds regression checks for window/tab switching and documents browser background behaviour. Hidden browser tabs or minimized browser windows can still pause processing; keep the browser game visible in its own window or use the desktop app for background automatic runs.
+Linux downloads now include an optional `./install-desktop.sh` helper to add the extracted game to your application menu with its new icon. Keep the extracted folder in place after installing the menu entry.
+
+Includes the v0.1.3 automatic racing fix: switching windows or tabs and pressing modifier keys preserves auto mode. Ordinary game keys and the Cancel auto button still stop future bets.
 
 ## Play
 
@@ -20,7 +22,7 @@ Inspired by Race the Nags by Richard “Dick” Olsen / Olsen Outdoors (1992).
 Classic uses 31 original portrait and horse/rider images, credited to the
 original creator. Enhanced restores three images supplied by the project
 creator. Original and enhanced images are excluded from MIT. The new code,
-code-drawn animation, SVG studies and roster use MIT. No DOS programs,
+code-drawn animation, SVG studies, new AI-generated app icon and roster use MIT. No DOS programs,
 raw PCX/IMG files or decompiled code are included.
 
 This free, non-commercial tribute includes a rightsholder/heir/estate takedown
