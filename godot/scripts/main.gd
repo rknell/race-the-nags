@@ -287,7 +287,7 @@ func add_graphics_choice(pos: Vector2, dimensions: Vector2) -> void:
 	graphics_choice.position = pos
 	graphics_choice.size = dimensions
 	graphics_choice.add_item("Classic — 1992 graphics")
-	graphics_choice.add_item("Illustrated graphics")
+	graphics_choice.add_item("Enhanced graphics")
 	graphics_choice.add_item("Animated horses")
 	graphics_choice.select(graphics_mode)
 	graphics_choice.item_selected.connect(set_graphics_mode)

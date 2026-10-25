@@ -127,6 +127,22 @@
     "portrait.png": {
       "sha256": "0eb86bb2bea90036ae3420891069085255369dfa3734185eb6262ba1ee8d2d7c",
       "source": "NAG.PCX"
+    },
+    "enhanced/horse_sheet_enhanced.png": {
+      "sha256": "91a07743240bd387f6063edf8f6a990d9ea9eb0edc0fb01f9080cc2c96ec4117",
+      "source": "Project owner supplied enhanced artwork",
+      "credit": "Project owner; original game inspiration credited to Richard “Dick” Olsen / Olsen Outdoors"
+    },
+    "enhanced/pony_sheet_enhanced.png": {
+      "sha256": "f8aabb6d0532d42bff8b934fe625a18dc2b49e902be3341b2dcd7ffc0bdcdb0d",
+      "source": "Project owner supplied enhanced artwork",
+      "credit": "Project owner; original game inspiration credited to Richard “Dick” Olsen / Olsen Outdoors"
+    },
+    "enhanced/nag_transparent_endhanced.png": {
+      "sha256": "375a0d0777c2f3445805e6ebe9b7880bc5d0f943df43b83817c0058c1615a53f",
+      "source": "Project owner supplied enhanced artwork",
+      "credit": "Project owner; original game inspiration credited to Richard “Dick” Olsen / Olsen Outdoors"
     }
-  }
+  },
+  "enhanced_credit": "Enhanced artwork supplied and created by the project owner; underlying original rights remain separate."
 }

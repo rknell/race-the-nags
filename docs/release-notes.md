@@ -1,4 +1,4 @@
-A playable Godot reconstruction of Race the Nags with Original and Remastered rules, restored Classic graphics plus new Illustrated and Animated styles, persistent racing history, manual and automatic betting, and local multiplayer for up to six players.
+Restores the project creator’s enhanced graphics that were mistakenly replaced in the public build. **Enhanced graphics** once again uses the supplied title portrait, gallop sheet and fallen-rider sheet, unchanged. **Animated horses** also uses the supplied enhanced portrait. Classic graphics and all racing rules remain available.
 
 ## Play
 
@@ -15,9 +15,10 @@ Browser saves are local to that browser and website, and may be lost if site dat
 ## Attribution
 
 Inspired by Race the Nags by Richard “Dick” Olsen / Olsen Outdoors (1992).
-Classic graphics restore 31 original portrait and horse/rider images, credited
-to the original creator. They retain their original rights and are excluded
-from MIT. The new code, new artwork and new roster use MIT. No DOS programs,
+Classic uses 31 original portrait and horse/rider images, credited to the
+original creator. Enhanced restores three images supplied by the project
+creator. Original and enhanced images are excluded from MIT. The new code,
+code-drawn animation, SVG studies and roster use MIT. No DOS programs,
 raw PCX/IMG files or decompiled code are included.
 
 This free, non-commercial tribute includes a rightsholder/heir/estate takedown

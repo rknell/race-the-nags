@@ -3,7 +3,8 @@
 A horse racing game inspired by Dick Olsen's 1992 **Race the Nags**. The public
 version contains a new GDScript implementation and 217 newly composed horse
 names. Classic graphics preserve the original portrait and horse sprites;
-Illustrated and Animated use new artwork. The original DOS programs, raw asset
+Enhanced uses the portrait and sprite sheets supplied by the project creator.
+Animated uses code-drawn horses and the enhanced portrait. The original DOS programs, raw asset
 files and decompiled code are not included.
 
 **[Play in your browser](https://rknell.github.io/race-the-nags/)** ·
@@ -22,7 +23,7 @@ Minimum stake is $2; the maximum is $1,000 or the available bankroll.
 - **Remastered:** persistent speed, stamina and consistency, recent form, and
   additional Quinella, Exacta, Trifecta and Box Trifecta bets. See
   [Remastered rules](docs/form-mode.md).
-- **Graphics:** credited Classic (1992) sprites, new Illustrated sprites, or code-drawn
+- **Graphics:** credited Classic (1992) sprites, the creator-supplied Enhanced sprites, or code-drawn
   Animated horses. Graphics can change without affecting a race or its RNG.
 - **Automatic racing:** choose a horse-selection strategy, bet type, race count
   and stake. A $0 stake uses 10% of the bankroll, with a $2 minimum.
@@ -85,14 +86,19 @@ Olsen Outdoors, 1992. Selected files and their hashes are documented in
 `godot/assets/heritage/provenance.json`. Original rights are retained; no
 additional permission for this reconstruction has been documented.
 
-Illustrated/Animated artwork is new. The new SVG assets are defined in
-`tools/generate_artwork.py`. See [artwork and provenance](docs/asset-recovery.md).
+Enhanced restores the project creator's supplied portrait, gallop sheet and
+fallen-rider sheet, byte-for-byte. Animated keeps the enhanced portrait with
+code-drawn horses. These files are recorded in the same provenance manifest
+and are separate from MIT. The alternative SVG studies remain in source under
+`godot/assets/public/`, but do not replace the Enhanced graphics.
+See [artwork and provenance](docs/asset-recovery.md).
 
 This is a free, non-commercial preservation tribute without endorsement. If a
 rightsholder, rightful heir or estate representative contacts the maintainer,
 we will promptly remove the affected material or take the project down as
 requested. [Contact and full notice](THIRD_PARTY_NOTICES.md).
 
-The new implementation, new artwork, roster and documentation use **MIT**.
-The original images and their reproduction in screenshots do not. Free hosting
+The new implementation, code-drawn animation, SVG studies, roster and
+documentation use **MIT**. Original and supplied enhanced images, and their
+reproduction in screenshots, are excluded from that grant. Free hosting
 and a takedown commitment do not establish permission to reuse those assets.

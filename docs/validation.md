@@ -7,7 +7,7 @@ multi-horse tickets, game-over handling and the bazooka feature.
 The new roster preserves stable IDs and roster size. Seeded Original fixtures
 keep their established movement, finish order, payouts and RNG state; only
 horse names change. Graphics tests exercise restored Classic and new
-Illustrated assets, switching during a race, preference persistence and the
+owner-supplied Enhanced assets, switching during a race, preference persistence and the
 code-drawn animation mode.
 
 The release workflow also checks public source exclusions, exported artwork,

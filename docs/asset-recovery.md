@@ -13,12 +13,27 @@ files, manuals and decompiled evidence remain excluded. These images are not
 MIT-licensed; no additional permission for reuse in this reconstruction has
 been documented. See [preservation and takedown notice](../THIRD_PARTY_NOTICES.md).
 
-## New artwork
+## Enhanced graphics restored from the supplied files
 
-Illustrated uses the independently drawn SVG atlas and horse badge defined in
-`tools/generate_artwork.py`. Animated uses the track's code-drawn horses and
-new badge. Run the generator to regenerate new SVGs without reading DOS files.
-New SVG assets under `godot/assets/public/` are MIT-licensed.
+The project creator's three enhanced images are preserved byte-for-byte under
+`godot/assets/heritage/enhanced/`:
 
-Graphics preferences remain compatible with earlier builds. Switching styles
-does not change racing rules, player state or RNG consumption.
+- `nag_transparent_endhanced.png`: the enhanced title portrait, also used by Animated.
+- `horse_sheet_enhanced.png`: 24 gallop frames arranged in four columns and six rows.
+- `pony_sheet_enhanced.png`: the six fallen-rider poses, with the original crop
+  positions and padding restored to avoid including arrow graphics.
+
+Their SHA-256 hashes are recorded in the provenance manifest. They are excluded
+from the MIT grant alongside the original imagery, with the same preservation
+and takedown notice. No enhanced images were regenerated or replaced.
+
+## Code-drawn animation and SVG studies
+
+Animated uses the track's code-drawn moving horses and the supplied enhanced
+portrait. Alternative independently drawn SVG studies remain under
+`godot/assets/public/`, with their generator in `tools/generate_artwork.py`.
+These SVG studies are not used in place of the supplied Enhanced graphics.
+The code-drawn animation and SVG studies are MIT-licensed.
+
+Saved graphics preference keys are unchanged. Switching styles does not change
+racing rules, player state or RNG consumption.

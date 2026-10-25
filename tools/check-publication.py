@@ -15,8 +15,8 @@ def path_digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else None
 
 problems = []
-if len(allowed_art) != 31:
-    problems.append("Expected exactly 31 selected heritage images")
+if len(allowed_art) != 34:
+    problems.append("Expected 31 Classic images and three owner-supplied enhanced images")
 for name in filter(None, tracked):
     p = Path(name)
     if name.startswith(('application/', 'evidence/', '.tools/', 'dist/', 'release/')):
@@ -38,4 +38,4 @@ for name in filter(None, tracked):
 if problems:
     print('\n'.join(problems), file=sys.stderr)
     sys.exit(1)
-print('Publication check: only the 31 explicitly selected heritage images are allowed; DOS files and private evidence excluded.')
+print('Publication check: only the 31 Classic and three owner-supplied Enhanced images are allowed; DOS files and private evidence excluded.')

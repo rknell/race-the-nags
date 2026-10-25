@@ -24,7 +24,7 @@ def zip_tree(source, target):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--version', default='0.1.1')
+    parser.add_argument('--version', default='0.1.2')
     args = parser.parse_args()
     version = args.version.removeprefix('v')
     if not version or any(c not in '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.-' for c in version):

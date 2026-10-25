@@ -20,9 +20,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Scope: this licence covers the new Godot implementation, independently drawn
-Illustrated/Animated artwork, new roster, build tools and project documentation.
-It does NOT cover the original graphics in godot/assets/heritage/ or their
+Scope: this licence covers the new Godot implementation, code-drawn animation,
+alternative SVG studies, new roster, build tools and project documentation.
+It does NOT cover original or creator-supplied enhanced images under
+godot/assets/heritage/, or their
 reproduction in screenshots. Those assets retain their original rights; this
 project grants no licence to them. Godot Engine retains its own licence.
 See THIRD_PARTY_NOTICES.md for attribution, preservation intent and takedown

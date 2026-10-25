@@ -3,9 +3,9 @@
 The Original ruleset was informed by private analysis of the 1992 DOS game.
 The public runtime is new GDScript and does not execute or distribute that game.
 Original binaries, extracted assets, raw decompilations and private analysis
-records are excluded. The public stable and Illustrated/Animated artwork are
-newly authored; Classic retains the selected original graphics under separate
-rights notices.
+records are excluded. The public stable is newly authored. Classic retains
+selected original graphics and Enhanced restores the project creator’s supplied
+images, under separate rights notices. Animated uses code-drawn horses.
 
 Original rules preserve the recovered odds, movement, falls, finish threshold
 and payout formulas. Godot uses its own RNG rather than the Borland sequence.

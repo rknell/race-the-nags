@@ -27,11 +27,11 @@ func run() -> void:
 	main.names[0].text = "GRAPHICS TEST"
 	main.graphics_choice.item_selected.emit(Artwork.REMASTERED)
 	check(main.names[0].text == "GRAPHICS TEST", "Switching title graphics preserves names")
-	check(main.title_portrait.texture.resource_path.ends_with("portrait.svg"), "New illustrated portrait displayed")
+	check(main.title_portrait.texture.resource_path.ends_with("nag_transparent_endhanced.png"), "Owner-supplied enhanced portrait displayed")
 	main.start_new()
 	check(main.track.frames.size() == 30, "Remastered loads 24 gallop frames and six fallen poses")
-	check(main.track.frames[0] is AtlasTexture and main.track.frames[0].atlas.resource_path.ends_with("horse-sheet.svg"), "Gallop uses enhanced horse sheet")
-	check(main.track.frames[24].atlas.resource_path.ends_with("horse-sheet.svg"), "Falls use enhanced pony sheet")
+	check(main.track.frames[0] is AtlasTexture and main.track.frames[0].atlas.resource_path.ends_with("horse_sheet_enhanced.png"), "Gallop uses enhanced horse sheet")
+	check(main.track.frames[24].atlas.resource_path.ends_with("pony_sheet_enhanced.png"), "Falls use enhanced pony sheet")
 	for frame in main.track.frames:
 		check(Rect2(Vector2.ZERO, frame.atlas.get_size()).encloses(frame.region), "Enhanced frame lies inside source sheet")
 	main.primary_action()
@@ -65,7 +65,7 @@ func run() -> void:
 	check(main.track.frames.is_empty(), "Animated deliberately uses the drawn horses")
 	check(main.model.mode == "form", "Animated preserves racing rules")
 	main.show_title()
-	check(main.title_portrait.texture.resource_path.ends_with("portrait.svg"), "Animated uses the independently drawn portrait")
+	check(main.title_portrait.texture.resource_path.ends_with("nag_transparent_endhanced.png"), "Animated restores the owner-supplied enhanced portrait")
 	var animated_restart = load("res://scenes/main.tscn").instantiate()
 	animated_restart.settings_path = main.settings_path
 	animated_restart.history_path = main.history_path

@@ -16,7 +16,12 @@ Historical reference: https://archive.org/details/RaceTheNags
 The **Classic — 1992 graphics** option uses the original title portrait and
 30 horse/rider images decoded from the supplied NAG.PCX and PONY.IMG files.
 The selected images are in `godot/assets/heritage/`; `provenance.json` identifies
-their source and SHA-256 hashes. The original DOS programs, raw PCX/IMG files,
+their source and SHA-256 hashes. The **Enhanced graphics** option restores the
+three enhanced images created and supplied by the project creator: the horse
+portrait, gallop sheet and fallen-rider sheet. They are preserved byte-for-byte
+under `godot/assets/heritage/enhanced/`. Animated horses use that same enhanced
+portrait. The supplied enhanced images are also excluded from the MIT grant;
+underlying original rights and the takedown commitment remain applicable. The original DOS programs, raw PCX/IMG files,
 manuals, extracted horse-name roster and decompiled reference evidence are not
 included in the public repository or releases.
 
@@ -46,8 +51,8 @@ We cannot recall copies already downloaded or held in third-party caches.
 
 ## New implementation and artwork
 
-The new GDScript implementation, independently drawn Illustrated/Animated
-artwork, new 217-horse roster, tools and documentation are MIT-licensed.
+The new GDScript implementation, code-drawn horse animation, alternative SVG
+artwork studies, new 217-horse roster, tools and documentation are MIT-licensed.
 The project's non-commercial tribute intent does not add a non-commercial
 restriction to that MIT-licensed code and new artwork. Original assets are
 excluded from MIT as described above.

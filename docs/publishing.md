@@ -73,9 +73,9 @@ would need their saves migrated to its application-specific storage path.
 
 ## Licensing and publication checks
 
-The new implementation, new artwork and stable roster use MIT. The 31 selected
-Classic images retain their original rights and are excluded from MIT. Their
-hashes are allowlisted; other original material, DOS binaries and decompiled
+The new implementation, code-drawn animation, SVG studies and stable roster use
+MIT. The 31 Classic images and three creator-supplied Enhanced images are
+excluded from MIT. Their hashes are allowlisted; other original material, DOS binaries and decompiled
 evidence remain excluded. See `THIRD_PARTY_NOTICES.md` for the free tribute and
 rightsholder/heir takedown commitment.
 `tools/check-publication.py` checks the tracked source and generated packs before
