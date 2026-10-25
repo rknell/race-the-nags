@@ -3,6 +3,8 @@ const Model = preload("res://scripts/race_model.gd")
 const Track = preload("res://scripts/track.gd")
 const Artwork = preload("res://scripts/artwork.gd")
 const HistorySimulation = preload("res://scripts/history_simulation.gd")
+const ARROW_RIGHT = preload("res://assets/public/ui/arrow-right.svg")
+const ARROW_UP_RIGHT = preload("res://assets/public/ui/arrow-up-right.svg")
 const CREAM := Color("f1ead7")
 const MUTED := Color("9eb7a7")
 const GOLD := Color("e6c278")
@@ -58,6 +60,8 @@ func _ready() -> void:
 	custom.set_color("font_color", "Label", CREAM)
 	custom.set_color("font_color", "Button", CREAM)
 	custom.set_color("font_hover_color", "Button", GOLD)
+	custom.set_color("icon_normal_color", "Button", CREAM)
+	custom.set_color("icon_hover_color", "Button", GOLD)
 	custom.set_stylebox("normal", "Button", box(Color("23473b"), 6, Color("416554")))
 	custom.set_stylebox("hover", "Button", box(Color("355e49"), 6, GOLD))
 	custom.set_stylebox("pressed", "Button", box(Color("43674b"), 6, GOLD))
@@ -156,13 +160,21 @@ func label_at(parent: Node, text_value: String, pos: Vector2, font_size: int = 1
 	parent.add_child(l)
 	return l
 
-func button_at(parent: Node, text_value: String, rect: Rect2, callback: Callable) -> Button:
+func button_at(parent: Node, text_value: String, rect: Rect2, callback: Callable, icon: Texture2D = null) -> Button:
 	var b := Button.new()
 	b.text = text_value
+	b.icon = icon
+	b.icon_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	b.position = rect.position
 	b.size = rect.size
 	b.pressed.connect(callback)
 	parent.add_child(b)
+	if icon != null:
+		for state in ["normal", "hover", "pressed", "disabled", "hover_pressed"]:
+			var style: StyleBox = b.get_theme_stylebox(state).duplicate()
+			style.content_margin_left = 16
+			style.content_margin_right = 16
+			b.add_theme_stylebox_override(state, style)
 	return b
 
 func reset_body() -> void:
@@ -226,7 +238,7 @@ func show_title() -> void:
 		edit.text_changed.connect(func(_text): remember_name_entries())
 		p.add_child(edit)
 		names.append(edit)
-	button_at(p, "HEAD TO THE TRACK  →", Rect2(30, 451, 464, 48), start_new)
+	button_at(p, "HEAD TO THE TRACK", Rect2(30, 451, 464, 48), start_new, ARROW_RIGHT)
 	var resume := button_at(p, "CONTINUE SAVED GAME", Rect2(30, 513, 464, 42), load_game)
 	resume.disabled = not FileAccess.file_exists(save_path)
 	button_at(p, "HOW TO PLAY", Rect2(30, 570, 225, 38), show_help)
@@ -364,9 +376,9 @@ func build_game() -> void:
 		recent.clip_text = true
 		recent_labels.append(recent)
 	if model.mode == Model.FORM:
-		button_at(card, "RACING FORM  ↗", Rect2(20, 414, 324, 40), show_racing_form)
+		button_at(card, "RACING FORM", Rect2(20, 414, 324, 40), show_racing_form, ARROW_UP_RIGHT)
 	else:
-		button_at(card, "HORSE STATISTICS  ↗", Rect2(20, 414, 324, 40), show_stats)
+		button_at(card, "HORSE STATISTICS", Rect2(20, 414, 324, 40), show_stats, ARROW_UP_RIGHT)
 	var bets := panel(body, Rect2(28, 508, 834, 213))
 	label_at(bets, "THE BETTING SLIP", Vector2(18, 12), 16, GOLD)
 	label_at(bets, "PLAYER / BANKROLL", Vector2(18, 43), 11, MUTED)
@@ -475,7 +487,7 @@ func build_game() -> void:
 	auto_amount.tooltip_text = "Fixed stake per player per race; $0 uses 10% of bankroll"
 	auto_panel.add_child(auto_amount)
 	auto_button = button_at(auto_panel, "Run auto", Rect2(229, 86, 120, 36), toggle_auto)
-	primary_button = button_at(body, "", Rect2(582, 739, 280, 44), primary_action)
+	primary_button = button_at(body, "", Rect2(582, 739, 280, 44), primary_action, ARROW_RIGHT)
 	notice = label_at(body, "F1 Help   F8 Save   F10 Sound   Alt+S Stats", Vector2(28, 752), 13, MUTED)
 	notice.size.x = 540
 	notice.clip_text = true
@@ -618,10 +630,12 @@ Speed %d/5 · Stamina %d/5 · Consistency %d/5" % [racing.speed, racing.stamina,
 		row.horse.select(int(p.horse))
 		row.kind.select(int(p.kind))
 	update_bet_markers()
-	primary_button.text = "START THE RACE  →" if model.phase == "BETTING" else ("NEXT RACE  →" if model.phase == "RESULTS" else "RACE IN PROGRESS…")
+	primary_button.text = "START THE RACE" if model.phase == "BETTING" else ("NEXT RACE" if model.phase == "RESULTS" else "RACE IN PROGRESS…")
+	primary_button.icon = ARROW_RIGHT if model.phase in ["BETTING", "RESULTS"] else null
 	primary_button.disabled = model.phase == "RACING" or not model.can_play()
 	if not model.can_play() and model.phase != "RACING":
 		primary_button.text = "BANKROLLS EMPTY"
+		primary_button.icon = null
 
 func primary_action() -> void:
 	if not in_game or dialog_layer:
@@ -756,7 +770,7 @@ func show_results() -> void:
 		label_at(p, money(int(r.net)), Vector2(475, y), 16, GOLD if int(r.net) > 0 else MUTED)
 		label_at(p, money(int(model.players[i].cash)), Vector2(650, y), 16)
 	label_at(p, "Race void: four runners are out. All stakes refunded." if model.void_race else ("All finishers are official. Return includes your original stake." if model.mode == Model.FORM else "Top three are official. Return includes your original stake."), Vector2(28, 520), 14, MUTED)
-	button_at(p, "BACK TO THE TRACK  →", Rect2(28, 564, 530 if model.auto_remaining > 0 else 790, 42), finish_results)
+	button_at(p, "BACK TO THE TRACK", Rect2(28, 564, 530 if model.auto_remaining > 0 else 790, 42), finish_results, ARROW_RIGHT)
 	if model.auto_remaining > 0 and model.can_play():
 		results_auto_button = button_at(p, "CANCEL AUTO", Rect2(578, 564, 240, 42), cancel_auto)
 		results_auto_button.tooltip_text = "Stop here without placing another bet."
@@ -809,7 +823,7 @@ func show_game_over() -> void:
 		label_at(p, money(int(player.cash)), Vector2(450, y), 20, GOLD)
 		label_at(p, money(int(player.cash) - 5000), Vector2(680, y), 20, MUTED)
 	game_over_countdown = label_at(p, "Returning home in %d…" % int(GAME_OVER_SECONDS), Vector2(32, 537), 18, MUTED)
-	button_at(p, "HOME  /  START AGAIN  →", Rect2(32, 585, 836, 44), show_title).grab_focus()
+	button_at(p, "HOME  /  START AGAIN", Rect2(32, 585, 836, 44), show_title, ARROW_RIGHT).grab_focus()
 	play_death_music()
 
 func show_help() -> void:

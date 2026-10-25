@@ -24,6 +24,7 @@ func run() -> void:
 	await process_frame
 	check(main.model.players.size() == 6, "Six-player setup")
 	check(main.track.frames.size() == 30, "Recovered sprite textures loaded")
+	check(main.primary_button.text == "START THE RACE" and main.primary_button.icon != null, "Start action uses a texture instead of a font arrow")
 	main.bet_rows[0].amount.value = 10
 	main.bet_rows[0].horse.select(3)
 	main.bet_rows[0].kind.select(2)
@@ -33,6 +34,7 @@ func run() -> void:
 	check(main.track.backers(3).has("PUNTER 0") and not main.track.backers(0).has("PUNTER 0"), "Lane marker follows edited pick")
 	main.primary_button.pressed.emit()
 	check(main.model.phase == "RACING", "Start button begins race")
+	check(main.primary_button.icon == null, "Racing status clears the action arrow")
 	check(main.model.players[0].cash == 4000, "Bet deducted once")
 	check(main.model.players[0].horse == 3 and main.model.players[0].kind == 2, "UI bet selection applied")
 	main.model.advance(2)
@@ -73,6 +75,7 @@ func run() -> void:
 	main.close_modal()
 	main.model.advance(1000)
 	main.update_game()
+	check(main.primary_button.text == "NEXT RACE" and main.primary_button.icon != null, "Results restore the next-race arrow texture")
 	main.show_results()
 	check(main.model.phase == "RESULTS" and main.dialog_layer != null, "Results modal shown")
 	main.finish_results()
